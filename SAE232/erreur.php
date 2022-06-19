@@ -15,18 +15,18 @@
    <nav>
   <div id="menu-hamburger">
     <!--
-    Une case à cocher fausse / cachée est utilisée comme récepteur de clics
+    Box used to receive all the clicks
     -->
     <input type="checkbox" />
     
     <!--
-   Les traits du hamburger menu.
+   Hamburger manu features.
     -->
     <span></span>
     <span></span>
     <span></span>
     
-<!-- menu qui apparait après un clic sur le "hamburger"-->
+<!-- Menu which appears after clicking on the "hamburger" button-->
    <ul id="menu">
 <li><a href="./index.html" class="first">Accueil</a></li>
 					<li><a href="./login_admin.php">Administration</a></li>
