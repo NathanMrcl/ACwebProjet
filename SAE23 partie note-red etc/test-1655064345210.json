@@ -1,0 +1,1512 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "snapshotData": [],
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 45,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 6,
+      "links": [],
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.5.5",
+      "snapshotData": [
+        {
+          "fields": [
+            {
+              "config": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Time",
+              "type": "time",
+              "values": [
+                1654858730000,
+                1654858755000,
+                1654858775000,
+                1654858795000,
+                1654858820000,
+                1654858840000,
+                1654858860000,
+                1654858880000,
+                1654858900000,
+                1654858925000,
+                1654858945000,
+                1654858965000,
+                1654858985000,
+                1654859010000,
+                1654859030000,
+                1654859050000,
+                1654859070000,
+                1654859095000,
+                1654859115000,
+                1654859135000,
+                1654859155000,
+                1654859180000,
+                1654859200000,
+                1654859220000
+              ]
+            },
+            {
+              "config": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "displayNameFromDS": "temperature.last",
+                "mappings": [],
+                "max": 45,
+                "min": 0,
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Value",
+              "type": "number",
+              "values": [
+                19,
+                21,
+                21,
+                20,
+                20,
+                19,
+                20,
+                20,
+                21,
+                19,
+                21,
+                21,
+                19,
+                19,
+                20,
+                21,
+                22,
+                20,
+                20,
+                20,
+                19,
+                21,
+                21,
+                22
+              ]
+            }
+          ],
+          "meta": {
+            "executedQueryString": "SELECT last(\"value\") FROM \"temperature\" WHERE (\"building\" = 'RT' AND \"room\" = 'E208') AND time >= now() - 30m and time <= now() GROUP BY time(5s) fill(none)"
+          },
+          "name": "temperature.last",
+          "refId": "A"
+        }
+      ],
+      "title": "température 208 ",
+      "type": "gauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "max": 30,
+          "min": 15,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 16,
+        "x": 8,
+        "y": 0
+      },
+      "id": 4,
+      "links": [],
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "snapshotData": [
+        {
+          "fields": [
+            {
+              "config": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "showPoints": "auto",
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Time",
+              "type": "time",
+              "values": [
+                1654858734000,
+                1654858756000,
+                1654858776000,
+                1654858798000,
+                1654858820000,
+                1654858840000,
+                1654858862000,
+                1654858882000,
+                1654858904000,
+                1654858926000,
+                1654858946000,
+                1654858968000,
+                1654858988000,
+                1654859010000,
+                1654859030000,
+                1654859052000,
+                1654859074000,
+                1654859094000,
+                1654859116000,
+                1654859138000,
+                1654859158000,
+                1654859180000,
+                1654859200000,
+                1654859222000
+              ]
+            },
+            {
+              "config": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "displayNameFromDS": "temperature.last",
+                "mappings": [],
+                "max": 30,
+                "min": 15,
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Value",
+              "type": "number",
+              "values": [
+                20,
+                21,
+                20,
+                19,
+                21,
+                19,
+                20,
+                21,
+                20,
+                20,
+                19,
+                19,
+                19,
+                21,
+                20,
+                20,
+                21,
+                21,
+                21,
+                20,
+                19,
+                20,
+                21,
+                19
+              ]
+            }
+          ],
+          "meta": {
+            "executedQueryString": "SELECT last(\"value\") FROM \"temperature\" WHERE (\"building\" = 'RT' AND \"room\" = 'E209') AND time >= now() - 30m and time <= now() GROUP BY time(2s) fill(none)"
+          },
+          "name": "temperature.last",
+          "refId": "A"
+        }
+      ],
+      "title": "Température salle E209",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 45,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 8,
+        "x": 0,
+        "y": 9
+      },
+      "id": 8,
+      "links": [],
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.5.5",
+      "snapshotData": [
+        {
+          "fields": [
+            {
+              "config": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Time",
+              "type": "time",
+              "values": [
+                1654857435000,
+                1654857440000,
+                1654857445000,
+                1654857450000,
+                1654857455000,
+                1654857460000,
+                1654857465000,
+                1654857470000,
+                1654857475000,
+                1654857480000,
+                1654857485000,
+                1654857490000,
+                1654857495000,
+                1654857500000,
+                1654857505000,
+                1654857510000,
+                1654857515000,
+                1654857520000,
+                1654857525000,
+                1654857530000,
+                1654857535000,
+                1654857540000,
+                1654857545000,
+                1654857550000,
+                1654857555000,
+                1654857560000,
+                1654857565000,
+                1654857570000,
+                1654857575000,
+                1654857580000,
+                1654857585000,
+                1654857590000,
+                1654857595000,
+                1654857600000,
+                1654857605000,
+                1654857610000,
+                1654857615000,
+                1654857620000,
+                1654857625000,
+                1654857630000,
+                1654857635000,
+                1654857640000,
+                1654857645000,
+                1654857650000,
+                1654857655000,
+                1654857660000,
+                1654857665000,
+                1654857670000,
+                1654857675000,
+                1654857680000,
+                1654857685000,
+                1654857690000,
+                1654857695000,
+                1654857700000,
+                1654857705000,
+                1654857710000,
+                1654857715000,
+                1654857720000,
+                1654857725000,
+                1654857730000,
+                1654857735000,
+                1654857740000,
+                1654857745000,
+                1654857750000,
+                1654857755000,
+                1654857760000,
+                1654857765000,
+                1654857770000,
+                1654857775000,
+                1654857780000,
+                1654857785000,
+                1654857790000,
+                1654857795000,
+                1654857800000,
+                1654857805000,
+                1654857810000,
+                1654857815000,
+                1654857820000,
+                1654857825000,
+                1654857830000,
+                1654857835000,
+                1654857840000,
+                1654857845000,
+                1654857850000,
+                1654857855000,
+                1654857860000,
+                1654857865000,
+                1654857870000,
+                1654857875000,
+                1654857880000,
+                1654857885000,
+                1654857890000,
+                1654857895000,
+                1654857900000,
+                1654857905000,
+                1654857910000,
+                1654857915000,
+                1654857920000,
+                1654857925000,
+                1654857930000,
+                1654857935000,
+                1654857940000,
+                1654857945000,
+                1654857950000,
+                1654857955000,
+                1654857960000,
+                1654857965000,
+                1654857970000,
+                1654857975000,
+                1654857980000,
+                1654857985000,
+                1654857990000,
+                1654857995000,
+                1654858000000,
+                1654858005000,
+                1654858010000,
+                1654858015000,
+                1654858020000,
+                1654858025000,
+                1654858030000,
+                1654858035000,
+                1654858040000,
+                1654858045000,
+                1654858050000,
+                1654858055000,
+                1654858060000,
+                1654858065000,
+                1654858070000,
+                1654858075000,
+                1654858080000,
+                1654858085000,
+                1654858090000,
+                1654858095000,
+                1654858100000,
+                1654858105000,
+                1654858110000,
+                1654858115000,
+                1654858120000,
+                1654858125000,
+                1654858130000,
+                1654858135000,
+                1654858140000,
+                1654858145000,
+                1654858150000,
+                1654858155000,
+                1654858160000,
+                1654858165000,
+                1654858170000,
+                1654858175000,
+                1654858180000,
+                1654858185000,
+                1654858190000,
+                1654858195000,
+                1654858200000,
+                1654858205000,
+                1654858210000,
+                1654858215000,
+                1654858220000,
+                1654858225000,
+                1654858230000,
+                1654858235000,
+                1654858240000,
+                1654858245000,
+                1654858250000,
+                1654858255000,
+                1654858260000,
+                1654858265000,
+                1654858270000,
+                1654858275000,
+                1654858280000,
+                1654858285000,
+                1654858290000,
+                1654858295000,
+                1654858300000,
+                1654858305000,
+                1654858310000,
+                1654858315000,
+                1654858320000,
+                1654858325000,
+                1654858330000,
+                1654858335000,
+                1654858340000,
+                1654858345000,
+                1654858350000,
+                1654858355000,
+                1654858360000,
+                1654858365000,
+                1654858370000,
+                1654858375000,
+                1654858380000,
+                1654858385000,
+                1654858390000,
+                1654858395000,
+                1654858400000,
+                1654858405000,
+                1654858410000,
+                1654858415000,
+                1654858420000,
+                1654858425000,
+                1654858430000,
+                1654858435000,
+                1654858440000,
+                1654858445000,
+                1654858450000,
+                1654858455000,
+                1654858460000,
+                1654858465000,
+                1654858470000,
+                1654858475000,
+                1654858480000,
+                1654858485000,
+                1654858490000,
+                1654858495000,
+                1654858500000,
+                1654858505000,
+                1654858510000,
+                1654858515000,
+                1654858520000,
+                1654858525000,
+                1654858530000,
+                1654858535000,
+                1654858540000,
+                1654858545000,
+                1654858550000,
+                1654858555000,
+                1654858560000,
+                1654858565000,
+                1654858570000,
+                1654858575000,
+                1654858580000,
+                1654858585000,
+                1654858590000,
+                1654858595000,
+                1654858600000,
+                1654858605000,
+                1654858610000,
+                1654858615000,
+                1654858620000,
+                1654858625000,
+                1654858630000,
+                1654858635000,
+                1654858640000,
+                1654858645000,
+                1654858650000,
+                1654858655000,
+                1654858660000,
+                1654858665000,
+                1654858670000,
+                1654858675000,
+                1654858680000,
+                1654858685000,
+                1654858690000,
+                1654858695000,
+                1654858700000,
+                1654858705000,
+                1654858710000,
+                1654858715000,
+                1654858720000,
+                1654858725000,
+                1654858730000,
+                1654858735000,
+                1654858740000,
+                1654858745000,
+                1654858750000,
+                1654858755000,
+                1654858760000,
+                1654858765000,
+                1654858770000,
+                1654858775000,
+                1654858780000,
+                1654858785000,
+                1654858790000,
+                1654858795000,
+                1654858800000,
+                1654858805000,
+                1654858810000,
+                1654858815000,
+                1654858820000,
+                1654858825000,
+                1654858830000,
+                1654858835000,
+                1654858840000,
+                1654858845000,
+                1654858850000,
+                1654858855000,
+                1654858860000,
+                1654858865000,
+                1654858870000,
+                1654858875000,
+                1654858880000,
+                1654858885000,
+                1654858890000,
+                1654858895000,
+                1654858900000,
+                1654858905000,
+                1654858910000,
+                1654858915000,
+                1654858920000,
+                1654858925000,
+                1654858930000,
+                1654858935000,
+                1654858940000,
+                1654858945000,
+                1654858950000,
+                1654858955000,
+                1654858960000,
+                1654858965000,
+                1654858970000,
+                1654858975000,
+                1654858980000,
+                1654858985000,
+                1654858990000,
+                1654858995000,
+                1654859000000,
+                1654859005000,
+                1654859010000,
+                1654859015000,
+                1654859020000,
+                1654859025000,
+                1654859030000,
+                1654859035000,
+                1654859040000,
+                1654859045000,
+                1654859050000,
+                1654859055000,
+                1654859060000,
+                1654859065000,
+                1654859070000,
+                1654859075000,
+                1654859080000,
+                1654859085000,
+                1654859090000,
+                1654859095000,
+                1654859100000,
+                1654859105000,
+                1654859110000,
+                1654859115000,
+                1654859120000,
+                1654859125000,
+                1654859130000,
+                1654859135000,
+                1654859140000,
+                1654859145000,
+                1654859150000,
+                1654859155000,
+                1654859160000,
+                1654859165000,
+                1654859170000,
+                1654859175000,
+                1654859180000,
+                1654859185000,
+                1654859190000,
+                1654859195000,
+                1654859200000,
+                1654859205000,
+                1654859210000,
+                1654859215000,
+                1654859220000,
+                1654859225000,
+                1654859230000,
+                1654859235000
+              ]
+            },
+            {
+              "config": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "displayNameFromDS": "temperature.mean",
+                "mappings": [],
+                "max": 45,
+                "min": 0,
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Value",
+              "type": "number",
+              "values": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                19,
+                null,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                19,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                19,
+                null,
+                null,
+                null,
+                19,
+                null,
+                null,
+                null,
+                19,
+                null,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                19,
+                null,
+                null,
+                null,
+                null,
+                20,
+                null,
+                null,
+                null,
+                21,
+                null,
+                null,
+                null,
+                19,
+                null,
+                null,
+                null
+              ]
+            }
+          ],
+          "meta": {
+            "executedQueryString": "SELECT mean(\"value\") FROM \"temperature\" WHERE (\"building\" = 'RT' AND \"room\" = 'E209') AND time >= now() - 30m and time <= now() GROUP BY time(5s) fill(null)"
+          },
+          "name": "temperature.mean",
+          "refId": "A"
+        }
+      ],
+      "title": "temperature E209",
+      "type": "gauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "max": 30,
+          "min": 15,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 16,
+        "x": 8,
+        "y": 9
+      },
+      "id": 2,
+      "links": [],
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "snapshotData": [
+        {
+          "fields": [
+            {
+              "config": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "showPoints": "auto",
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Time",
+              "type": "time",
+              "values": [
+                1654858734000,
+                1654858756000,
+                1654858776000,
+                1654858798000,
+                1654858820000,
+                1654858840000,
+                1654858860000,
+                1654858882000,
+                1654858904000,
+                1654858924000,
+                1654858946000,
+                1654858968000,
+                1654858988000,
+                1654859010000,
+                1654859030000,
+                1654859052000,
+                1654859072000,
+                1654859094000,
+                1654859116000,
+                1654859138000,
+                1654859158000,
+                1654859180000,
+                1654859200000,
+                1654859220000
+              ]
+            },
+            {
+              "config": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "displayNameFromDS": "temperature.last",
+                "mappings": [],
+                "max": 30,
+                "min": 15,
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "celsius"
+              },
+              "name": "Value",
+              "type": "number",
+              "values": [
+                19,
+                21,
+                21,
+                20,
+                20,
+                19,
+                20,
+                20,
+                21,
+                19,
+                21,
+                21,
+                19,
+                19,
+                20,
+                21,
+                22,
+                20,
+                20,
+                20,
+                19,
+                21,
+                21,
+                22
+              ]
+            }
+          ],
+          "meta": {
+            "executedQueryString": "SELECT last(\"value\") FROM \"temperature\" WHERE (\"building\" = 'RT' AND \"room\" = 'E208') AND time >= now() - 30m and time <= now() GROUP BY time(2s) fill(none)"
+          },
+          "name": "temperature.last",
+          "refId": "A"
+        }
+      ],
+      "title": "température salle E208",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 36,
+  "snapshot": {
+    "originalUrl": "http://192.168.195.237:3000/d/lfhvvvCnk/test?orgId=1",
+    "timestamp": "2022-06-10T11:07:16.361Z"
+  },
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2022-06-10T10:37:20.376Z",
+    "raw": {
+      "from": "now-30m",
+      "to": "now"
+    },
+    "to": "2022-06-10T11:07:20.376Z"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "test",
+  "uid": "lfhvvvCnk",
+  "version": 2,
+  "weekStart": ""
+}
