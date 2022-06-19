@@ -2,11 +2,11 @@
 	session_start();
 	$_SESSION["log"]=$_REQUEST["log"];
 	$login=$_SESSION["log"];
-	$_SESSION["mdp"]=$_REQUEST["mdp"];  // Récupération du mot de passe
+	$_SESSION["mdp"]=$_REQUEST["mdp"];  // Password recuperation
 	$motdep=$_SESSION["mdp"];
 	$_SESSION["auth"]=FALSE;
 
-	// Script de vérification du mot de passe d'un gestionnaire, en utilisant la table Gestionnaire
+	// Verification script hich redirects to the date Gestionnaire.
 
 	if(empty($login))
 		header("Location:erreur.php");
